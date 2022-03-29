@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    border: 5px solid black;
+    display: grid;
+    margin: 5rem auto;
+    width: 90%;
+    max-width: 120rem;   
+gap: 2rem;
+    display: grid;
+    grid-template-columns: 100px 100px 100px ;
+     grid-template-rows: 100px 100px ;
+    grid-auto-rows: 100px; 
+    align-content: center;    
+    /*Para mover contenidos por filas veamoslo de esta manera, los separa pero no uno por uno, sino por filas*/
+     justify-content: center;
+    /*Este es para mover todos los contenidos como un bloque*/
+    height: 600px;
+
+
+
+
+
+/*Con el grid auto-rows basta para designar un alto(height)
+a los rows que se atraviesen*/
+}
+
+
+/*Propiedades de alineacion.
+Las propiedades de alineación son pues propiedades que se utilizan para alinear.
+Hay dos tipos de alineacion en css grid la de los items y la de los elementos 
+La de los elementos ser
+
+Justify-items: 
+align-items: 
+y el shorthand sería.
+place-items: 
+
+
+----------------
+
+Justify-content: 
+align-content: 
+place-content: 
+
+esto es para la grilla completa
+
+----------------
+
+También tenemos otra propiedad que se le asigna directamente a los items para posicionarlos
+por ejemplo en la parte superior o inferior etc.
+
+justify-self: 
+align-self: 
+place-self
+
+*/
+
+
+.item {
+    background-color: aqua;
+    border: 5px solid white;
+}
+
+
+
+
+/*------------------ALINEACION-ITEMS-------------------------------*/
+
+
+.contenedor-items {
+    border: 5px solid black;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 2rem;
+    grid-auto-rows: 100px;
+    height: 600px;
+     justify-items: center;
+/*recuerda cabrón que el justify-items es para mover dentro de los
+ elememtos, el contenido que tienen, es básicamente lo mismo del content, 
+ sólo que aquí no es a las cajas, es a los hijos que están dentro de esas cajas
+ ahhh y se me olvidaba, este también es en hoizontal.*/
+
+ align-items: center; 
+ /*este es el vertical y tenemos que saber que por defecto los elementos tienen un valor de stretch
+ lo que significa que van a ocupar todo el espacio del contenido.
+ Para evitar esto sólo le cambiamos el valor a align items y listo.
+ 
+ */
+
+
+
+ width: 90%;
+ max-width: 120rem;
+ margin: 5rem auto;
+}
+.items {
+background-color: aqua;
+border: 5px solid #fff;
+}
+
+/*--------------Alineacion con self-----------------------------*/
+
+
+.content-self {
+    border: 5px solid black;
+    width: 90%;
+    max-width: 120rem;
+    margin: 5rem auto;
+
+
+   display: grid;
+   grid-template-columns: 100px 100px 100px;
+   gap: 2rem;
+   grid-auto-rows: 100px;
+   height: 600px;
+   
+
+
+}
+.selfs {
+    background-color: aqua;
+    border: 5px solid #fff;
+    display: grid;
+  
+}
+.selfs:nth-child(1) {
+    justify-self: center;
+    align-items: flex-end;
+    justify-items: end;
+}
+
+
+/*Investigar un tanto más de align self y toda esa wea*/

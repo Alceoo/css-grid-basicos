@@ -1,0 +1,41 @@
+.contenedor {
+    background-color: aqua;
+    border: 2px solid black;
+    display: grid;
+       grid-template-columns: 100px 200px 300px ;   
+    /*Esto lo que mide es el ancho de las columnas y cuántas columnas queremos*/
+        grid-template-rows: 200px 200px;  
+/* esto lo que mide es el alto de las filas, es muy util si sabemos cuantos elementos vamos 
+a tener, peros si no sabemos entonces tenemos otra propiedad
+Aqui le estamos diciendo que queremos dos filas con un alto especificado
+*/
+
+      grid-auto-rows: 150px; 
+/*esta propiedad lo que hace es decirle al navegador, cuánto queremos que mida cada fila que se cree, 
+no importa cuál sea, es cualquiera*/
+
+row-gap: 1rem;
+column-gap: 2rem;
+
+/*esto lo que va a hacer es poner un espacio entre filas y columnas*/
+
+
+
+
+/*Con esto le estamos diciendo que sus contenidos se coloquen en distinto orden, antes uno 
+seguido de otro y ahora uno abajo de otro en orden de posicion, esto quiere decir que si tenemos
+seis elementos pues ya no se van a colocar uno seguido de otro uno dos tres, sino que se van a poner
+uno, tres, cinco y abajo dos, cuatro, seis, suponiendo que tengamos 3 columnas*/
+grid-auto-flow: column;
+
+
+
+}
+
+
+
+
+.item {
+   border: 5px solid #fff;
+    font-size: 4rem;
+}

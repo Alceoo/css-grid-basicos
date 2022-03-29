@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.container {
+   
+   border: 5px solid black;
+   
+    margin: 5rem auto;
+
+display: grid;
+grid-template-columns: 150px 150px;
+/*esto lo hago ya que el diseño que tengo que imitar tiene dos columnas*/
+ grid-auto-rows: 150px;
+
+ /*Esta propiedad la pongo por si llegara a haber muchos rows, en automático 
+ con esto todos medirían 150 px de altura*/
+
+
+ grid-template-rows: 150px 150px 150px;
+/*El grid template rows lo pongo para que tengan filas a las cuáles mover 
+el contenido, de lo contrario lo que pasaría en este caso ya que tiene 
+un auto rows sería que se acomodarían en una sóla fila e iría creando más columnas*/
+
+
+
+
+grid-auto-flow: column;
+/*El grid auto flow lo estoy utilizando porque quiero que el orden de
+mis elementos en lugar de row a column, para quelos elementos vayan de arriba hacia abajo */
+
+gap: 2rem;
+}
+
+.items {
+    background-color: green;
+     font-size: 3rem;
+     border: 5px solid white;
+  
+
+}
+.items p {
+    background-color: aqua;
+    width: max-content;
+}
+
+
+
+
